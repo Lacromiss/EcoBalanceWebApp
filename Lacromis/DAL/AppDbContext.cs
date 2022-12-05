@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Lacromis.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lacromis.DAL
 {
@@ -6,7 +7,11 @@ namespace Lacromis.DAL
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
+            
 
         }
+       public DbSet<Garbage> garbages { get; set; }
+      public  DbSet<Catagory> catagories { get; set; }
+      public  DbSet<Metal> metals { get; set; }
     }
 }

@@ -143,3 +143,7 @@ C:\Users\lacro\source\repos\Lacromis\Lacromis\bin\Debug\net5.0\runtimes\win-arm6
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Views\Services\Index.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\_ViewStart.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\_ViewImports.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Home\Index.cshtml.g.cs
