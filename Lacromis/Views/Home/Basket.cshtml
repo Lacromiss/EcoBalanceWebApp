@@ -1,0 +1,31 @@
+﻿@using Lacromis.ViewModel
+@model List<BuyGarbageCount>
+@{
+    Layout = null;
+}
+
+
+@foreach (var item in Model)
+{
+
+
+    <tbody>
+        <tr>
+
+            <td style="color:#bfa279; font-size:20px">
+                @item.Name
+
+            </td>
+
+            <td style="color:#bfa279; font-size:20px">
+                <a style="color:#bfa279; font-size:20px" asp-action="Cix" asp-controller="Home" asp-route-Id="@item.Id">-</a>
+
+                @item.Count
+                <a style="color:#bfa279; font-size:20px" asp-action="Topla" asp-controller="Home" asp-route-Id="@item.Id">+</a>
+
+            </td>
+            <td style="color:#bfa279; font-size:20px">@item.Price</td>
+        </tr>
+
+    </tbody>
+}
