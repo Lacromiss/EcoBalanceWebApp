@@ -1,0 +1,54 @@
+﻿@using Lacromis.ViewModel
+@model List<Metal>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="stricky-header stricked-menu main-menu main-menu-three">
+    <div class="sticky-header__content"></div>
+    <!-- /.sticky-header__content -->
+</div>
+<!-- /.stricky-header -->
+<section>
+    <!--for demo wrap-->
+    <div class="title" style="display: flex; text-align: center; margin-top: 140px; margin-bottom: 10px;">
+        <img src="https://www.azersun.com/./assets/img/icons/azersun-logo.svg" alt="">
+    </div>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">№</th>
+                    <th style="text-align: center;">Məhsul</th>
+                    <th style="text-align: center;">Qiymət</th>
+                    <th style="text-align: center;">Dəyişmə</th>
+                    <th style="text-align: center;">Dəyişmə (%)</th>
+                    <th style="text-align: center;">Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                @foreach (var item in Model)
+               {
+                   
+               
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;"> @item.Name</td>
+                    <td style="text-align: center;">@item.Price ₼</td>
+                    <td style="text-align: center;">+0.3</td>
+                    <td style="text-align: center;">-0.36%</td>
+                    <td style="text-align: center;" class="action">
+                            <a  asp-action="AddBasket" asp-controller="Metal" asp-route-Id="@item.Id"><i class='bx bx-cart-add'>Add</i></a>
+                    </td>
+                </tr>
+                }
+
+            
+
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -147,3 +147,8 @@ C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\_ViewStart.cshtml.g.cs
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\_ViewImports.cshtml.g.cs
 C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Home\Index.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Metal\Index.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Metal\Create.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Areas\Siuuu\Views\Metal\Update.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Views\Metal\Index.cshtml.g.cs
+C:\Users\lacro\source\repos\Lacromis\Lacromis\obj\Debug\net5.0\Razor\Views\Metal\Basket.cshtml.g.cs
