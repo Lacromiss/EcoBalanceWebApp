@@ -59,7 +59,7 @@ namespace Lacromis.Areas.Siuuu.Controllers
                 }
 
 
-                garbage.ImgUrl = await garbage.Photo.SaveFileAsync(Path.Combine(_env.WebRootPath, "assets", "images"));
+                garbage.ImgUrl = await garbage.Photo.SaveFileAsync(Path.Combine(_env.WebRootPath, "assets", "images", "icon"));
 
 
             }
@@ -133,14 +133,14 @@ namespace Lacromis.Areas.Siuuu.Controllers
 
                 }
 
-                string suloysu = Path.Combine(_env.WebRootPath, "assets", "images", product1.ImgUrl);
+                string suloysu = Path.Combine(_env.WebRootPath, "assets", "images","icon", product1.ImgUrl);
                 if (System.IO.File.Exists(suloysu))
                 {
                     System.IO.File.Delete(suloysu);
 
                 }
 
-                product1.ImgUrl = await product.Photo.SaveFileAsync(Path.Combine(_env.WebRootPath, "assets", "images"));
+                product1.ImgUrl = await product.Photo.SaveFileAsync(Path.Combine(_env.WebRootPath, "assets", "images","icon"));
 
 
             }
@@ -152,6 +152,7 @@ namespace Lacromis.Areas.Siuuu.Controllers
             product1.Description = product.Description;
             product1.Descrition2 = product.Descrition2;
             product1.Descrition3 = product.Descrition3;
+            product1.Price = product.Price;
             product1.Name = product.Name;
 
             _context.SaveChanges();
@@ -167,7 +168,7 @@ namespace Lacromis.Areas.Siuuu.Controllers
 
             }
 
-            string suloysu = Path.Combine(_env.WebRootPath, "Assets", "images", product.ImgUrl);
+            string suloysu = Path.Combine(_env.WebRootPath, "Assets", "images","icon", product.ImgUrl);
             if (System.IO.File.Exists(suloysu))
             {
                 System.IO.File.Delete(suloysu);

@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Lacromis.Models.Account
+@inject UserManager<AppUser> userManager
+@inject SignInManager<AppUser> signInManager
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,7 +93,7 @@
 
                             <li><a asp-action="Index" asp-controller="ContactUs">Əlaqə</a></li>
 
-                            <a href="./filter.html" class="filter-list position-absolute">
+                            <a asp-action="Index" asp-controller="Metal" class="filter-list position-absolute">
                                 <i class='bx bx-filter-alt pe-2'></i>Filter
                             </a>
 
@@ -106,14 +110,26 @@
                             <a href="#" class="main-menu-three__search search-toggler icon-magnifying-glass"></a>
                         </div>
                         <ul class="d-flex" style="list-style-type: none;">
+                               @if (signInManager.IsSignedIn(User))
+                        {
                             <li class="me-1">
                                 <a href="./sign-in.html" class="d-flex align-items-center" style=" font-size: 22px; color: #FFFFFF;">
-                                    <i class='bx bx-user-circle pe-1' style="color: #ECDD5E;"></i>Giriş
+                                        <i class='bx bx-user-circle pe-1' style="color: #ECDD5E;"></i>UserName : @userManager.GetUserName(User)
                                 </a>
                             </li>
+                        }
 
+                        else
+                            {
+                                <li class="me-1">
+                                    <a sp-action="LogOut" asp-controller="Account" class="d-flex align-items-center" style=" font-size: 22px; color: #FFFFFF;">
+                                        <i class='bx bx-user-circle pe-1' style="color: #ECDD5E;"></i>LogOut
+                                    </a>
+                                </li>
+
+                            }
                             <li class="ms-1">
-                                <a href="#" class="d-flex align-items-center" style=" font-size: 22px; color: #FFFFFF;">
+                                <a  asp-action="Basket" asp-controller="Home" class="d-flex align-items-center" style=" font-size: 22px; color: #FFFFFF;">
                                     <i class='bx bx-cart-alt pe-1' style="color: #ECDD5E;"></i>Səbət     <span class="cart-qty cart-counter" style="color:#bfa279;font-weight:700">@ViewBag.kount</span>
 
 

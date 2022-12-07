@@ -1,7 +1,10 @@
 using Lacromis.DAL;
+using Lacromis.Models;
+using Lacromis.Models.Account;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,9 +30,21 @@ namespace Lacromis
         {
             services.AddControllersWithViews();
             string Musi = Configuration.GetConnectionString("default");
-            services.AddDbContext<AppDbContext>(opt =>
+            services.AddDbContext<AppDbContext>(optt =>
             {
-                opt.UseSqlServer(Musi);
+                optt.UseSqlServer(Musi);
+            });
+            services.AddIdentity<AppUser, IdentityRole>()
+                           .AddEntityFrameworkStores<AppDbContext>()
+                           .AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(opt =>
+            {
+                opt.Password.RequireDigit = true;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireLowercase = true;
+                opt.Password.RequireUppercase = true;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(3);
+
             });
         }
 
